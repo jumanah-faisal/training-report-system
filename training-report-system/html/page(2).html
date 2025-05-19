@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/page(2).css">
+    <title>النظام الإداري الذكي</title>
+  
+</head>
+<body>
+    <header class="custom-header">
+        <div class="container">
+            <div class="header-content">
+                <!-- اللوگو -->
+                <div class="logo-section">
+                    <a href="./main.html" class="brand-logo">
+                        <img width="40" height="40" src="https://img.icons8.com/ultraviolet/40/keyhole-shield.png" alt="keyhole-shield"/>                        <span class="logo-text">نظام الأمن</span>
+                    </a>
+                </div>
+    
+                <!-- روابط التنقل -->
+                <nav class="nav-section">
+                    <a href="./main.html" class="nav-link">الرئيسية</a>
+                        <a href="./page(1).html" class="nav-link">ادراج تقرير المراقبة</a>
+                        <a href="#" class="nav-link">ادراج تقرير تخزبن الكاميرات</a>
+                        <a href="#" class="nav-link">ادراج تقرير اعطال الكاميرات</a>
+                        <a href="#" class="nav-link">تعديل</a>
+                        <a href="./page(1).html" class="nav-link">الاستعلام</a>
+                </nav>
+    
+                <!-- معلومات المستخدم -->
+                <div class="user-section">
+                    <div class="user-info">
+                        <a href="./login.html" class="user-icon">
+                            <img width="50" height="50" src="https://img.icons8.com/forma-light/50/FFFFFF/user.png" alt="user"/>
+                        </a>
+                        <div class="user-details">
+                            <span class="user-name">جمانة فيصل</span>
+                            <span class="user-role">متدرب جامعي</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+ 
+
+    <div class="intro-section">
+        <h1 class="intro-title"> إضافة تقرير</h1>
+    </div>
+
+
+
+    
+    <main class="main-container">
+        <!-- Floating Decorations -->
+        <div class="floating-icon"></div>
+        <div class="floating-icon"></div>
+
+     
+
+        <!-- Details Section -->
+        <div class="glass-panel">
+            <h2 class="section-title">المعلومات الاساسية</h2>
+            <div class="form-grid">
+
+                <div class="right-fields">
+                    <div class="input-group">
+                        <label class="input-label">المنطقة</label>
+                        <div class="select-wrapper">
+                            <select class="modern-input">
+                                <option>--المنطقة--</option>
+                                <option>الرياض</option>
+                                <option>جدة</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="input-group">
+                        <label class="input-label">اليوم</label>
+                        <div class="select-wrapper">
+                            <select class="modern-input">
+                                <option>--اليوم--</option>
+                                <option>الأحد</option>
+                                <option>الإثنين</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="input-group">
+                        <label class="input-label">الوقت</label>
+                        <input type="time" class="modern-input">
+                    </div>
+                    
+                    <div class="input-group">
+                        <label class="input-label">اسم المراقب</label>
+                        <input type="text" class="modern-input" placeholder="--اسم المراقب--">
+                    </div>
+                </div>
+                
+                <!-- Left Side Fields -->
+                <div class="left-fields">
+                    <div class="input-group">
+                        <label class="input-label">المعالجة/الحالة</label>
+                        <div class="select-wrapper">
+                            <select class="modern-input">
+                                <option>--المعالجة/الحالة--</option>
+                                <option>جديد</option>
+                                <option>قيد التنفيذ</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="input-group">
+                        <label class="input-label">التاريخ</label>
+                        <input type="date" class="modern-input">
+                    </div>
+                    
+                    <div class="input-group">
+                        <label class="input-label">الملاحظة تخص:</label>
+                        <div class="select-wrapper">
+                            <select class="modern-input">
+                                <option>--نوع الملاحظة--</option>
+                                <option>إدارية</option>
+                                <option>فنية</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="input-group">
+                        <label class="input-label">الملاحظات</label>
+                        <textarea class="modern-input" rows="5" placeholder="أدخل ملاحظاتك هنا..."></textarea>
+                    </div>
+                </div>
+            </div>
+              
+
+            <button class="submit-btn">
+              تعديل
+            </button>
+        </div>
+    </main>
+</body>
+</html>

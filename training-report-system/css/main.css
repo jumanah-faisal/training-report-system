@@ -1,0 +1,423 @@
+
+/* استايل عام */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Tajawal', sans-serif;
+    padding-top: 80px;
+    
+   
+}
+/* الهيدر */
+.custom-header {
+            background: linear-gradient(145deg, #0F1F5B 0%, #1A2A6C 100%);
+            box-shadow: 0 4px 25px rgba(0,0,0,0.2);
+            backdrop-filter: blur(10px);
+            height: 85px;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+}
+
+.header-content {
+    display: flex;
+    flex-direction: row-reverse; 
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* قسم اللوگو */
+.logo-section {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  
+
+}
+
+.brand-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none !important;
+    flex-direction: row-reverse;
+    margin-top: 12px;
+    margin-right: -80px;
+}
+
+.logo-text {
+    color: #92b6dd;
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-right: 10px;
+}
+
+/* روابط التنقل */
+.nav-section {
+    display: flex;
+    gap: 2.5rem;
+    align-items: center;
+}
+
+.nav-link {
+    color: #fff !important;
+    text-decoration: none;
+    font-size: 0.-400rem;
+    position: relative;
+    transition: all 0.3s ease;
+    margin-top: 12px;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #92b6dd;
+    transition: width 0.3s;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+/* قسم المستخدم */
+.user-section {
+    display: flex;
+    align-items: center;
+    margin-top: 12px;
+    margin-left: -70px;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.user-icon {
+    display: flex;
+    align-items: center;
+}
+
+.user-icon img {
+    width: 35px;
+    height: 35px;
+}
+
+.user-details {
+    display: flex;
+    flex-direction: column;
+    color: #fff;
+}
+
+.user-name {
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+.user-role {
+    font-size: 0.9rem;
+    color: #92b6dd;
+}
+
+
+@media (max-width: 768px) {
+    .header-content {
+        flex-direction: column;
+        gap: 1rem;
+        padding: 10px;
+    }
+    
+    .nav-section {
+        gap: 1.5rem;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .logo-text {
+        font-size: 1.5rem;
+    }
+    
+    .user-info {
+        gap: 10px;
+    }
+}
+
+
+/* /////////////////////////نهاية الهيدر////////////////////// */
+
+/* صورة بداية الموقع */
+.rectangle {
+    width: 970px;
+    height: 500px;
+  
+    position: absolute;
+    top: 140px;
+    left: -250px; 
+    background-image: url('../img/cyber-security-concept-b.png');
+    background-size: cover;
+    background-position: center;
+    border-radius: 15px;
+    margin-left: 70px;
+  
+   
+}
+
+
+/* قسم الخدمات */
+#services {
+    /* padding: 6rem 2rem; */
+    background: #ffffff;
+    margin-top: -410px;
+  margin-bottom: 70px;
+}
+
+#services h2 {
+    font-size: 2.8rem;
+    color: #080752;
+    text-align: center;
+    margin-bottom: 4rem;
+    position: relative;
+}
+
+#services h2::after {
+content: '';
+    width: 120px;
+    height: 4px;
+    background: #ffffff;
+    background: var(--accent-orange);
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 2px;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2.5rem;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.service-card {
+    /* background: #ffffff; */
+    /* background: rgba(14, 31, 88, 0.05); */
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 8px 30px rgba(14, 31, 88, 0.08);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    text-align: center;
+    border: 2px solid transparent;
+    position: relative;
+    overflow: hidden;
+}
+
+.service-card::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    /* background: linear-gradient(45deg, transparent, rgba(86, 86, 104, 0.1)); */
+    transform: rotate(45deg);
+    transition: 0.5s;
+ 
+}
+
+.service-card:hover::before {
+    top: 20%;
+    left: 20%;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 40px rgba(14, 31, 88, 0.15);
+    border-color: #e74c3c;
+}
+
+.service-icon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* background: rgba(14, 31, 88, 0.05); */
+    border-radius: 15px;
+    transition: all 0.3s;
+}
+
+
+
+.service-icon img {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+}
+
+.service-card h3 {
+    font-size: 1.4rem;
+    color: var(--main-blue);
+    margin-bottom: 1rem;
+}
+
+/* نهاية قسم الخدمات */
+
+/* الفوتر */
+footer {
+  
+    background: linear-gradient(145deg, #0F1F5B 0%, #1A2A6C 100%);
+    color: white;
+    padding: 10px 20px; 
+    text-align: center;
+    position: relative;
+}
+
+/* محتوى الفوتر */
+footer .footer-content {
+    margin-bottom: 20px; 
+}
+
+/* روابط الفوتر */
+footer .footer-links {
+    margin-bottom: 10px;
+}
+
+footer .footer-links a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 14px;
+    padding: 5px;
+    display: inline-block;
+}
+
+footer .footer-links a:hover {
+    color: #83b1cb;
+    
+}
+
+/* أيقونات التواصل الاجتماعي */
+footer .social-icons {
+    display: flex;
+    justify-content: flex-end; 
+    position: absolute;
+    bottom: 10px; 
+    right: 20px; 
+}
+
+footer .social-icons a {
+    margin: 0 10px; 
+}
+
+footer .social-icons img {
+    width: 30px; 
+    height: 30px;
+    transition: transform 0.3s ease;
+}
+
+footer .social-icons img:hover {
+    transform: scale(1.1); 
+}
+
+/* النص */
+footer p {
+    font-size: 12px; 
+    margin-top: 10px;
+}
+
+
+/* السهم للتبديل بين الأعلى والأسفل */
+.scroll-toggle {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #e74c3c; 
+    padding: 12px;
+    border-radius: 50%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.scroll-toggle:hover {
+    background-color: #ff7f50; 
+}
+
+.scroll-toggle i {
+    color: white;
+    font-size: 20px;
+}
+
+
+/* content مربع في بداية الصفحة*/
+.content {
+    z-index: 2;
+    max-width: 600px;
+    text-align: right;
+    padding: 20px;
+    /* background-color: #83b1cb;; */
+    border-radius: 10px;
+    background: linear-gradient(135deg, #83b1cb, #cad0df);
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
+    margin-left: 800px; 
+    margin-bottom: 700px;
+    margin-top: 170px;
+    direction: rtl; 
+}
+
+
+.content h1 {
+    color: #0e1f58;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.content p {
+    color: #555;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #0e1f58; 
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+.btn:hover {
+    background-color: #0e1f58; 
+
+}
+/* نهاية مربع في بداية الصفحة */
+
+
+
+
+
+
+
+
+
+
+
+

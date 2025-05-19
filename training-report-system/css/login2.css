@@ -1,0 +1,112 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Tajawal', sans-serif;
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    /* background: linear-gradient(to right, #1A2A6C, #92b6dd); */
+    background: linear-gradient(#566b85e6, rgba(162, 181, 202, 0.9))
+}
+.container {
+    display: flex;
+    width: 80%;
+    max-width: 900px;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0px 5px 30px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+}
+.right-section {
+    width: 45%;
+    background: linear-gradient(135deg, #1A2A6C, #92b6dd);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2.5rem;
+    text-align: center;
+}
+.right-section i {
+    font-size: 3rem;
+    margin-bottom: 1.2rem;
+}
+.changing-text {
+    font-size: 1.4rem;
+    font-weight: bold;
+    animation: fadeInOut 10s infinite;
+}
+.left-section {
+    width: 55%;
+    padding: 3rem;
+    text-align: center;
+}
+.left-section h1 {
+    font-size: 2rem;
+    color: #1A2A6C;
+    margin-bottom: 2rem;
+}
+.input-group {
+    margin-bottom: 1.5rem;
+    position: relative;
+}
+.input-group input {
+    width: 100%;
+    padding: 1rem;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+    text-align: right;
+    background: #f9f9f9;
+    transition: 0.3s;
+}
+.input-group input:focus {
+    border-color: #1A2A6C;
+    outline: none;
+}
+/* .login-btn {
+    width: 100%;
+    padding: 1rem;
+    border-radius: 10px;
+    border: none;
+    background: #1A2A6C;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.login-btn:hover {
+    opacity: 0.8;
+} */
+
+.login-btn {
+    width: 100%;
+    padding: 0.8rem;
+    border-radius: 8px;
+    border: 1px solid #1A2A6C;
+    background: #1A2A6C;
+    color: white;
+    font-size: 0.9rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+    text-decoration: none; /* إزالة أي خط تحت النص */
+    display: inline-block; /* لضمان عدم تأثره بأسلوب الروابط */
+}
+
+.login-btn:hover {
+    background: #14245c;
+    border-color: #14245c;
+    opacity: 0.9;
+}
+
+@keyframes fadeInOut {
+    0%, 100% { opacity: 0; }
+    25%, 75% { opacity: 1; }
+}

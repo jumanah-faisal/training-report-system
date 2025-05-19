@@ -1,0 +1,571 @@
+:root {
+    --primary: #92b6dd;
+    --secondary: #1b1a53;
+    --glass: rgba(255, 255, 255, 0.95);
+    --text: #1e293b;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    justify-content: space-between;
+
+}
+
+body {
+    font-family: 'Tajawal', sans-serif;
+    direction: rtl;
+    background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+    min-height: 100vh;
+    color: var(--text);
+   
+ 
+}
+
+
+/* الهيدر */
+.custom-header {
+    
+    background: linear-gradient(145deg, #0F1F5B 0%, #1A2A6C 100%);
+    box-shadow: 0 4px 25px rgba(0,0,0,0.2);
+    backdrop-filter: blur(10px);
+    height: 85px;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+  
+}
+
+.header-content {
+display: flex;
+flex-direction: row-reverse; 
+justify-content: space-between;
+align-items: center;
+max-width: 1200px;
+margin: 0 auto;
+padding: 0 20px;
+
+flex-direction: row; /* تغيير من row-reverse إلى row */
+}
+
+/* قسم اللوگو */
+.logo-section {
+display: flex;
+align-items: center;
+gap: 10px;
+
+
+}
+
+.brand-logo {
+display: flex;
+align-items: center;
+gap: 10px;
+text-decoration: none !important;
+
+margin-top: 12px;
+margin-right: -80px;
+}
+
+.logo-text {
+color: #92b6dd;
+font-size: 1.8rem;
+font-weight: 700;
+margin-right: 10px;
+flex-direction: row-reverse;
+}
+
+/* روابط التنقل */
+.nav-section {
+display: flex;
+gap: 2.5rem;
+align-items: center;
+}
+
+.nav-link {
+color: #fff !important;
+text-decoration: none;
+font-size: 0.-400rem;
+position: relative;
+transition: all 0.3s ease;
+margin-top: 12px;
+}
+
+.nav-link::after {
+content: '';
+position: absolute;
+bottom: -5px;
+left: 0;
+width: 0;
+height: 2px;
+background: #92b6dd;
+transition: width 0.3s;
+}
+
+.nav-link:hover::after {
+width: 100%;
+}
+
+/* قسم المستخدم */
+.user-section {
+display: flex;
+align-items: center;
+margin-top: 12px;
+margin-left: -70px;
+flex-direction: row-reverse;
+}
+
+.user-info {
+display: flex;
+align-items: center;
+gap: 15px;
+}
+
+.user-icon {
+display: flex;
+align-items: center;
+flex-direction: row-reverse;
+}
+
+.user-icon img {
+width: 35px;
+height: 35px;
+display: flex;
+flex-direction: row-reverse; 
+margin-left: -150px;
+}
+
+.user-details {
+display: flex;
+flex-direction: column;
+color: #fff;
+
+}
+
+.user-name {
+font-weight: 600;
+font-size: 1.1rem;
+}
+
+.user-role {
+font-size: 0.9rem;
+color: #92b6dd;
+}
+
+
+@media (max-width: 768px) {
+.header-content {
+flex-direction: column;
+gap: 1rem;
+padding: 10px;
+}
+
+.nav-section {
+gap: 1.5rem;
+flex-wrap: wrap;
+justify-content: center;
+}
+
+.logo-text {
+font-size: 1.5rem;
+}
+
+.user-info {
+gap: 10px;
+}
+}
+ /* نهاية الهيدر */
+
+
+/* بداية main البحث برقم التقرير */
+.main-container {
+    max-width: 1200px;
+    margin: 6rem auto 2rem;
+    padding: 0 2rem;
+     margin: 120px auto 2rem; 
+     padding: 30px 2rem 0; 
+}
+ 
+
+
+/* Glass Panel Design */
+.glass-panel {
+    background: var(--glass);
+    backdrop-filter: blur(15px);
+    border-radius: 20px;
+    padding: 2.5rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    position: relative;
+    overflow: hidden;
+ 
+
+}
+
+.glass-panel::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(45deg, 
+        rgba(37, 99, 235, 0.05) 0%,
+        rgba(59, 130, 246, 0.1) 50%,
+        rgba(245, 158, 11, 0.05) 100%);
+    transform: rotate(15deg);
+    z-index: -1;
+  
+}
+
+
+
+/* Form Elements */
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.input-group {
+    position: relative;
+    margin-bottom: 1.5rem;
+}
+
+.input-label {
+    display: block;
+    margin-bottom: 0.8rem;
+    font-weight: 500;
+    color: var(--primary);
+    font-size: 0.95rem;
+}
+
+.modern-input {
+    width: 100%;
+    padding: 1rem;
+    border: 2px solid #e2e8f0;
+    border-radius: 12px;
+    font-size: 1rem;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    background: rgba(255, 255, 255, 0.8);
+}
+
+.modern-input:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.2);
+    outline: none;
+    background: white;
+}
+
+.select-wrapper {
+    position: relative;
+}
+
+.select-wrapper::after {
+    content: '⌄';
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--primary);
+    font-size: 1.2rem;
+    pointer-events: none;
+}
+
+/* زر التعديل */
+.submit-btn {
+    background: #0F1F5B;
+    color: white;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 12px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.submit-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255, 255, 255, 0.2),
+        transparent
+    );
+    transition: 0.5s;
+}
+
+.submit-btn:hover::before {
+    left: 100%;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .main-container {
+        padding: 0 1rem;
+        margin-top: 4rem;
+    }
+
+    .glass-panel {
+        padding: 1.5rem;
+    }
+
+    .submit-btn {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+/* Special Effects */
+.floating-icon {
+    position: absolute;
+    opacity: 0.1;
+    pointer-events: none;
+}
+
+.floating-icon:nth-child(1) {
+    top: -30px;
+    left: -30px;
+    width: 80px;
+    height: 80px;
+    background: var(--primary);
+    border-radius: 20px;
+    transform: rotate(15deg);
+}
+
+.floating-icon:nth-child(2) {
+    bottom: -40px;
+    right: -40px;
+    width: 100px;
+    height: 100px;
+    border: 4px solid var(--accent);
+    border-radius: 50%;
+}
+
+.main-container {
+    max-width: 1200px;
+    margin: 6rem auto 2rem;
+    padding: 0 2rem;
+}
+
+.glass-panel {
+    background: var(--glass);
+    backdrop-filter: blur(15px);
+    border-radius: 20px;
+    padding: 2.5rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    position: relative;
+    overflow: hidden;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.input-group {
+    position: relative;
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.input-label {
+    font-weight: 500;
+    color: var(--primary);
+    font-size: 0.95rem;
+}
+
+.modern-input {
+    width: 100%;
+    padding: 1rem;
+    border: 2px solid #e2e8f0;
+    border-radius: 12px;
+    font-size: 1rem;
+    background: rgba(255, 255, 255, 0.8);
+}
+
+.serial-icon {
+    width: 40px;
+    height: 40px;
+}
+
+.search-button {
+    background: #0F1F5B;
+    color: white;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 12px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.search-button:hover {
+    background: var(--secondary);
+}
+/* ////////////////////////////////////////////////////// */
+
+.intro-section {
+text-align: center;
+margin: 100px auto -66px; /* تحديد موقع مناسب */
+padding: 20px;
+
+}
+
+.intro-title {
+font-size: 2.0rem;
+font-weight: bold;
+color: var(--secondary);
+
+}
+
+.intro-subtitle {
+font-size: 1.2rem;
+color: var(--primary);
+margin-top: 10px;
+}
+
+
+input::placeholder,
+textarea::placeholder {
+color: rgba(0, 0, 0, 0.5); /* اللون الخفيف */
+font-size: 1rem; /* حجم النص */
+}
+
+/* تعديل النصوص داخل الـ select */
+select {
+color: rgba(0, 0, 0, 0.5); /* اللون الخفيف لجميع النصوص داخل select */
+}
+
+
+
+
+
+/* أنيميشنات الإدخال */
+.modern-input {
+  transition: all 0.3s ease-in-out !important;
+  border: 1px solid #a0c4ff !important;
+}
+
+.modern-input:hover {
+  border-color: #4d90fe !important;
+  box-shadow: 0 0 8px rgba(77, 144, 254, 0.2) !important;
+}
+
+.modern-input:focus {
+  border-color: #1a73e8 !important;
+  box-shadow: 0 0 12px rgba(26, 115, 232, 0.3) !important;
+  animation: input-glow 1.5s infinite alternate;
+}
+
+@keyframes input-glow {
+  from {
+    box-shadow: 0 0 6px rgba(26, 115, 232, 0.3);
+  }
+  to {
+    box-shadow: 0 0 12px rgba(26, 115, 232, 0.5);
+  }
+}
+
+/* أنيميشنات الأزرار */
+.search-button, .submit-btn {
+  transition: all 0.3s ease-in-out !important;
+  background: linear-gradient(135deg, #1a73e8, #0F1F5B) !important;
+  position: relative;
+  overflow: hidden;
+}
+
+.search-button:hover, .submit-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(26, 115, 232, 0.4) !important;
+}
+
+.search-button::after, .submit-btn::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: rgba(255, 255, 255, 0.1);
+  transform: rotate(45deg);
+  transition: all 0.5s ease;
+}
+
+.search-button:hover::after, .submit-btn:hover::after {
+  left: 150%;
+}
+
+/* أنيميشنات السليكت */
+.select-wrapper {
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.select-wrapper::after {
+  content: "▼";
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #0F1F5B;
+  transition: all 0.3s ease;
+}
+
+.select-wrapper:hover::after {
+  color: #4d90fe;
+  transform: translateY(-50%) scale(1.2);
+}
+
+/* أنيميشنات النوافذ الزجاجية */
+.glass-panel {
+  animation: panel-float 4s ease-in-out infinite alternate;
+  transition: all 0.3s ease;
+}
+
+@keyframes panel-float {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-10px);
+  }
+}
+
+.glass-panel:hover {
+  box-shadow: 0 8px 32px rgba(26, 115, 232, 0.2) !important;
+}
+
+/* أنيميشنات النص البراق */
+.intro-title {
+  position: relative;
+  animation: title-shine 3s ease-in-out infinite;
+}
+
+@keyframes title-shine {
+  0% {
+    text-shadow: 0 0 10px rgba(26, 115, 232, 0.3);
+  }
+  50% {
+    text-shadow: 0 0 20px rgba(26, 115, 232, 0.6);
+  }
+  100% {
+    text-shadow: 0 0 10px rgba(26, 115, 232, 0.3);
+  }
+}
